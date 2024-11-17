@@ -30,3 +30,8 @@ Audio Sources:
     - Default Texture Filter: **Nearest**
 
 ![alt text](image-1.png)
+
+## Branching
+1. **start-from-scratch** -> start this project from scratch.
+2. **start-prepared** -> start this project with some prepared scenes.
+3. **complete** -> complete of this project with example stages
