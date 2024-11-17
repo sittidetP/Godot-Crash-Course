@@ -21,13 +21,13 @@ Audio Sources:
 ## Settings in this Project
 1. Display > Window
   - W:H → **640 x 480**
-    - Stretch:
-        - Mode: **canvas_items**
+	- Stretch:
+		- Mode: **canvas_items**
 
 ![alt text](image.png)
 2. Rendering > Textures
   - Canvas Textures
-    - Default Texture Filter: **Nearest**
+	- Default Texture Filter: **Nearest**
 
 ![alt text](image-1.png)
 
