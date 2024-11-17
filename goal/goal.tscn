@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://drjvsqv3811jb"]
+
+[ext_resource type="SpriteFrames" uid="uid://ds1dvib3buumn" path="res://goal/goal_sprite_frame.tres" id="1_u2t6d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vxgl"]
+size = Vector2(9, 46)
+
+[node name="Goal" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_u2t6d")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.5, 9)
+shape = SubResource("RectangleShape2D_6vxgl")
