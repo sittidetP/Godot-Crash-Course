@@ -1,6 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=27 format=3 uid="uid://behfjbnjcd5t0"]
+[gd_resource type="SpriteFrames" load_steps=28 format=3 uid="uid://behfjbnjcd5t0"]
 
 [ext_resource type="Texture2D" uid="uid://brhtr36cv8cpo" path="res://player/Idle (32x32).png" id="1_x2h48"]
+[ext_resource type="Texture2D" uid="uid://0nbr7nqx4smi" path="res://player/Fall (32x32).png" id="1_y77mu"]
 [ext_resource type="Texture2D" uid="uid://bwih64m0vasmp" path="res://player/Jump (32x32).png" id="2_n7gv3"]
 [ext_resource type="Texture2D" uid="uid://c088iii4ui1ss" path="res://player/Run (32x32).png" id="3_5km87"]
 
@@ -98,7 +99,10 @@ region = Rect2(352, 0, 32, 32)
 
 [resource]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y77mu")
+}],
 "loop": true,
 "name": &"fall",
 "speed": 5.0
