@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://1na7vw73r7v1"]
+[gd_scene load_steps=4 format=4 uid="uid://1na7vw73r7v1"]
 
 [ext_resource type="PackedScene" uid="uid://bhq48uqrhoxlc" path="res://player/player.tscn" id="1_00p1i"]
 [ext_resource type="TileSet" uid="uid://n420gebqt3uq" path="res://tilesets/stage_tile_set.tres" id="2_fwm1i"]
+[ext_resource type="PackedScene" uid="uid://drjvsqv3811jb" path="res://goal/goal.tscn" id="3_v3f5o"]
 
 [node name="SandboxScene" type="Node2D"]
 
@@ -20,9 +21,12 @@ tile_set = ExtResource("2_fwm1i")
 tile_map_data = PackedByteArray("AAAAAAUAAAAGAAAAAAAAAAYAAAAGAAEAAAAAAAcAAAAGAAIAAAABAAUAAAAHAAAAAAABAAYAAAAHAAEAAAABAAcAAAAHAAIAAAACAAUAAAAHAAAAAAACAAYAAAAHAAEAAAACAAcAAAAHAAIAAAADAAUAAAAHAAAAAAADAAYAAAAHAAEAAAADAAcAAAAHAAIAAAAEAAUAAAAHAAAAAAAEAAYAAAAHAAEAAAAEAAcAAAAHAAIAAAAFAAUAAAAHAAAAAAAFAAYAAAAHAAEAAAAFAAcAAAAHAAIAAAAGAAUAAAAHAAAAAAAGAAYAAAAHAAEAAAAGAAcAAAAHAAIAAAAHAAUAAAAHAAAAAAAHAAYAAAAHAAEAAAAHAAcAAAAHAAIAAAAIAAUAAAAHAAAAAAAIAAYAAAAHAAEAAAAIAAcAAAAHAAIAAAAJAAUAAAAHAAAAAAAJAAYAAAAHAAEAAAAJAAcAAAAHAAIAAAAKAAUAAAAHAAAAAAAKAAYAAAAHAAEAAAAKAAcAAAAHAAIAAAALAAUAAAAHAAAAAAALAAYAAAAHAAEAAAALAAcAAAAHAAIAAAAMAAUAAAAHAAAAAAAMAAYAAAAHAAEAAAAMAAcAAAAHAAIAAAANAAUAAAAHAAAAAAANAAYAAAAHAAEAAAANAAcAAAAHAAIAAAAOAAUAAAAHAAAAAAAOAAYAAAAHAAEAAAAOAAcAAAAHAAIAAAAPAAUAAAAHAAAAAAAPAAYAAAAHAAEAAAAPAAcAAAAHAAIAAAAQAAUAAAAHAAAAAAAQAAYAAAAHAAEAAAAQAAcAAAAHAAIAAAARAAUAAAAIAAAAAAARAAYAAAAIAAEAAAARAAcAAAAIAAIAAAA=")
 tile_set = ExtResource("2_fwm1i")
 
+[node name="Goal" parent="." instance=ExtResource("3_v3f5o")]
+position = Vector2(263, 48)
+
 [connection signal="body_entered" from="CollectablesTileMapLayer/Strawberry" to="CollectablesTileMapLayer/Strawberry" method="_on_body_entered"]
 [connection signal="body_entered" from="CollectablesTileMapLayer/Apple" to="CollectablesTileMapLayer/Apple" method="_on_body_entered"]
-[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@38411" to="CollectablesTileMapLayer/@Area2D@38411" method="_on_body_entered"]
-[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@38412" to="CollectablesTileMapLayer/@Area2D@38412" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@26446" to="CollectablesTileMapLayer/@Area2D@26446" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@26447" to="CollectablesTileMapLayer/@Area2D@26447" method="_on_body_entered"]
 [connection signal="body_entered" from="ObstaclesTileMapLayer/Spikes" to="ObstaclesTileMapLayer/Spikes" method="_on_body_entered"]
-[connection signal="body_entered" from="ObstaclesTileMapLayer/@Area2D@37345" to="ObstaclesTileMapLayer/@Area2D@37345" method="_on_body_entered"]
+[connection signal="body_entered" from="ObstaclesTileMapLayer/@Area2D@26448" to="ObstaclesTileMapLayer/@Area2D@26448" method="_on_body_entered"]

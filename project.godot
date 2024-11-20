@@ -20,6 +20,10 @@ window/size/viewport_width=640
 window/size/viewport_height=480
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+collectables="For access collectables in the scene."
+
 [input]
 
 move_left={
