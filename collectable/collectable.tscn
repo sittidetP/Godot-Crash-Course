@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://341frh6pyeop"]
+
+[ext_resource type="Script" path="res://collectable/collectable.gd" id="1_ooq27"]
+[ext_resource type="PackedScene" uid="uid://bmxwjbsp2il12" path="res://collectable/collected_effect_animated_sprite_2d.tscn" id="2_ma03r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5kalj"]
+radius = 7.0
+
+[node name="Collectable" type="Area2D" groups=["collectables"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ooq27")
+collected_effect_scene = ExtResource("2_ma03r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5kalj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
