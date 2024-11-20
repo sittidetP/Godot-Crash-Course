@@ -6,7 +6,7 @@ extends Area2D
 var another_collected_effect_scene := load("res://collectable/collected_effect_animated_sprite_2d.tscn")
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	#instantiate_effect_from_export()
 	
 	instantiate_effect_from_load()
