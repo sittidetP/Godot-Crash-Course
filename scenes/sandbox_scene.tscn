@@ -1,17 +1,28 @@
-[gd_scene load_steps=4 format=4 uid="uid://1na7vw73r7v1"]
+[gd_scene load_steps=3 format=4 uid="uid://1na7vw73r7v1"]
 
 [ext_resource type="PackedScene" uid="uid://bhq48uqrhoxlc" path="res://player/player.tscn" id="1_00p1i"]
 [ext_resource type="TileSet" uid="uid://n420gebqt3uq" path="res://tilesets/stage_tile_set.tres" id="2_fwm1i"]
-[ext_resource type="PackedScene" uid="uid://dwhoyb886u88c" path="res://spikes/spikes.tscn" id="3_t6riv"]
 
 [node name="SandboxScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_00p1i")]
-position = Vector2(82, 65)
+position = Vector2(20, 73)
+
+[node name="CollectablesTileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAADAAMAAQAAAAAAAgAFAAMAAQAAAAAAAQAIAAMAAQAAAAAAAgAMAAMAAQAAAAAAAQA=")
+tile_set = ExtResource("2_fwm1i")
+
+[node name="ObstaclesTileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAKAAQAAgAAAAAAAQAHAAQAAgAAAAAAAQA=")
+tile_set = ExtResource("2_fwm1i")
 
 [node name="GroundTileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAUAAAAGAAAAAAAAAAYAAAAGAAEAAAAAAAcAAAAGAAIAAAABAAUAAAAHAAAAAAABAAYAAAAHAAEAAAABAAcAAAAHAAIAAAACAAUAAAAHAAAAAAACAAYAAAAHAAEAAAACAAcAAAAHAAIAAAADAAUAAAAHAAAAAAADAAYAAAAHAAEAAAADAAcAAAAHAAIAAAAEAAUAAAAHAAAAAAAEAAYAAAAHAAEAAAAEAAcAAAAHAAIAAAAFAAUAAAAHAAAAAAAFAAYAAAAHAAEAAAAFAAcAAAAHAAIAAAAGAAUAAAAHAAAAAAAGAAYAAAAHAAEAAAAGAAcAAAAHAAIAAAAHAAUAAAAHAAAAAAAHAAYAAAAHAAEAAAAHAAcAAAAHAAIAAAAIAAUAAAAHAAAAAAAIAAYAAAAHAAEAAAAIAAcAAAAHAAIAAAAJAAUAAAAHAAAAAAAJAAYAAAAHAAEAAAAJAAcAAAAHAAIAAAAKAAUAAAAHAAAAAAAKAAYAAAAHAAEAAAAKAAcAAAAHAAIAAAALAAUAAAAHAAAAAAALAAYAAAAHAAEAAAALAAcAAAAHAAIAAAAMAAUAAAAHAAAAAAAMAAYAAAAHAAEAAAAMAAcAAAAHAAIAAAANAAUAAAAHAAAAAAANAAYAAAAHAAEAAAANAAcAAAAHAAIAAAAOAAUAAAAHAAAAAAAOAAYAAAAHAAEAAAAOAAcAAAAHAAIAAAAPAAUAAAAHAAAAAAAPAAYAAAAHAAEAAAAPAAcAAAAHAAIAAAAQAAUAAAAHAAAAAAAQAAYAAAAHAAEAAAAQAAcAAAAHAAIAAAARAAUAAAAIAAAAAAARAAYAAAAIAAEAAAARAAcAAAAIAAIAAAA=")
 tile_set = ExtResource("2_fwm1i")
 
-[node name="Spikes" parent="." instance=ExtResource("3_t6riv")]
-position = Vector2(135, 72)
+[connection signal="body_entered" from="CollectablesTileMapLayer/Strawberry" to="CollectablesTileMapLayer/Strawberry" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/Apple" to="CollectablesTileMapLayer/Apple" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@38411" to="CollectablesTileMapLayer/@Area2D@38411" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@38412" to="CollectablesTileMapLayer/@Area2D@38412" method="_on_body_entered"]
+[connection signal="body_entered" from="ObstaclesTileMapLayer/Spikes" to="ObstaclesTileMapLayer/Spikes" method="_on_body_entered"]
+[connection signal="body_entered" from="ObstaclesTileMapLayer/@Area2D@37345" to="ObstaclesTileMapLayer/@Area2D@37345" method="_on_body_entered"]

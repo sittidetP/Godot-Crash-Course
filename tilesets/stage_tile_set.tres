@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://n420gebqt3uq"]
+[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://n420gebqt3uq"]
 
 [ext_resource type="Texture2D" uid="uid://c31sby08qf634" path="res://tilesets/Terrain (16x16).png" id="1_o83fl"]
 [ext_resource type="PackedScene" uid="uid://42itstvqetu6" path="res://collectable/apple.tscn" id="2_3476a"]
 [ext_resource type="PackedScene" uid="uid://c62pmxm6slpl0" path="res://collectable/strawberry.tscn" id="3_c7o2n"]
+[ext_resource type="PackedScene" uid="uid://dwhoyb886u88c" path="res://spikes/spikes.tscn" id="4_a3wg6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_apw63"]
 texture = ExtResource("1_o83fl")
@@ -182,8 +183,13 @@ resource_name = "Collectable"
 scenes/1/scene = ExtResource("2_3476a")
 scenes/2/scene = ExtResource("3_c7o2n")
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_oq724"]
+resource_name = "Obstacles"
+scenes/1/scene = ExtResource("4_a3wg6")
+
 [resource]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_apw63")
 sources/1 = SubResource("TileSetScenesCollectionSource_r6rlu")
+sources/2 = SubResource("TileSetScenesCollectionSource_oq724")
