@@ -7,6 +7,9 @@ const JUMP_VELOCITY = -400.0
 var facing_direction: int = 1
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
+const ONE_WAY_COLLISION_MARGIN := 1
 
 func _physics_process(delta: float) -> void:
 	handle_in_air(delta)
@@ -14,6 +17,9 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
 	
 	handle_move(direction)
+	
+	if Input.is_action_just_pressed("drop"):
+		position.y += ONE_WAY_COLLISION_MARGIN
 		
 	flip(int(direction))
 	
@@ -26,6 +32,7 @@ func handle_in_air(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		audio_stream_player.play()
 		velocity.y = JUMP_VELOCITY
 
 func handle_move(direction: float) -> void:
