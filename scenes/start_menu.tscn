@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dys483m0qknbd"]
+[gd_scene load_steps=6 format=3 uid="uid://dys483m0qknbd"]
 
 [ext_resource type="Script" path="res://scenes/start_button.gd" id="1_jv07c"]
 [ext_resource type="AudioStream" uid="uid://ch3dswvt5m0oc" path="res://scenes/Intro Theme.mp3" id="1_xw5k6"]
 [ext_resource type="PackedScene" uid="uid://bn8ffebd4rnbu" path="res://scenes/stage_1_scene.tscn" id="2_2albi"]
+[ext_resource type="Script" path="res://scenes/quit_button.gd" id="3_0bv02"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ycbry"]
 font_size = 26
@@ -65,9 +66,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
 text = "Quit"
+script = ExtResource("3_0bv02")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_xw5k6")
 autoplay = true
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]
