@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://dys483m0qknbd"]
+
+[ext_resource type="AudioStream" uid="uid://ch3dswvt5m0oc" path="res://scenes/Intro Theme.mp3" id="1_xw5k6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ycbry"]
+font_size = 26
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameNameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.0
+offset_top = 30.0
+offset_right = 178.0
+offset_bottom = 66.0
+grow_horizontal = 2
+text = "Untitled Crash Course Game"
+label_settings = SubResource("LabelSettings_ycbry")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -15.5
+offset_right = 23.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 35.0
+offset_right = 25.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_xw5k6")
+autoplay = true

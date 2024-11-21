@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bal4qvtiv4g7g"]
+
+[ext_resource type="PackedScene" uid="uid://bhq48uqrhoxlc" path="res://player/player.tscn" id="1_re53k"]
+[ext_resource type="TileSet" uid="uid://n420gebqt3uq" path="res://tilesets/stage_tile_set.tres" id="2_2jayw"]
+[ext_resource type="PackedScene" uid="uid://drjvsqv3811jb" path="res://goal/goal.tscn" id="3_2coxq"]
+
+[node name="TempleteStageScene" type="Node2D"]
+
+[node name="PlatformsTileMapLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_2jayw")
+
+[node name="CollectablesTileMapLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_2jayw")
+
+[node name="ObstaclesTileMapLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_2jayw")
+
+[node name="GroundTileMapLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_2jayw")
+
+[node name="Player" parent="." instance=ExtResource("1_re53k")]
+
+[node name="Goal" parent="." instance=ExtResource("3_2coxq")]

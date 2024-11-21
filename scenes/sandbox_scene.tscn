@@ -30,6 +30,6 @@ position = Vector2(263, 48)
 
 [connection signal="body_entered" from="CollectablesTileMapLayer/Strawberry" to="CollectablesTileMapLayer/Strawberry" method="_on_body_entered"]
 [connection signal="body_entered" from="CollectablesTileMapLayer/Apple" to="CollectablesTileMapLayer/Apple" method="_on_body_entered"]
-[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@48603" to="CollectablesTileMapLayer/@Area2D@48603" method="_on_body_entered"]
-[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@48604" to="CollectablesTileMapLayer/@Area2D@48604" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@23788" to="CollectablesTileMapLayer/@Area2D@23788" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@23789" to="CollectablesTileMapLayer/@Area2D@23789" method="_on_body_entered"]
 [connection signal="body_entered" from="ObstaclesTileMapLayer/Spikes" to="ObstaclesTileMapLayer/Spikes" method="_on_body_entered"]
