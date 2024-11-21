@@ -1,5 +1,13 @@
 # Godot Crash Course
 
+Godot Version: **4.3**
+
+This course is about create the 2D game(Plaformer) with simple mechanics such as
+- Player that can walk, idle, jump, fall and drop down from platformer
+- Collect all collecable, and go to the goal to finish the stage
+- Have the label to display the coolectable amount
+
+
 Sprite's Source: https://pixelfrog-assets.itch.io/pixel-adventure-1
 <br/>
 Audio Sources:
@@ -7,6 +15,8 @@ Audio Sources:
 	- Musics: https://opengameart.org/content/platformer-game-music-pack
 	<br/>
 	- Sound Effects: https://opengameart.org/content/8-bit-sound-effects-library
+
+
 
 ## How To Import Sprites Pixel Art
 
