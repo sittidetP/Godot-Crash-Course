@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://drjvsqv3811jb"]
+[gd_scene load_steps=5 format=3 uid="uid://drjvsqv3811jb"]
 
 [ext_resource type="Script" path="res://goal/goal.gd" id="1_ai1va"]
 [ext_resource type="SpriteFrames" uid="uid://ds1dvib3buumn" path="res://goal/goal_sprite_frame.tres" id="1_u2t6d"]
+[ext_resource type="AudioStream" uid="uid://dd36jxlxvwasn" path="res://goal/Jingle_Achievement_01.mp3" id="3_nfrrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6vxgl"]
 size = Vector2(9, 46)
 
 [node name="Goal" type="Area2D"]
+z_index = 5
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_ai1va")
@@ -19,4 +21,12 @@ autoplay = "default"
 position = Vector2(-8.5, 9)
 shape = SubResource("RectangleShape2D_6vxgl")
 
+[node name="FlagIdleTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nfrrb")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

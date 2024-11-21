@@ -14,7 +14,7 @@ tile_map_data = PackedByteArray("AAADAAMAAQAAAAAAAgAFAAMAAQAAAAAAAQAIAAMAAQAAAAA
 tile_set = ExtResource("2_fwm1i")
 
 [node name="ObstaclesTileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAKAAQAAgAAAAAAAQAHAAQAAgAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAKAAQAAgAAAAAAAQA=")
 tile_set = ExtResource("2_fwm1i")
 
 [node name="GroundTileMapLayer" type="TileMapLayer" parent="."]
@@ -26,7 +26,6 @@ position = Vector2(263, 48)
 
 [connection signal="body_entered" from="CollectablesTileMapLayer/Strawberry" to="CollectablesTileMapLayer/Strawberry" method="_on_body_entered"]
 [connection signal="body_entered" from="CollectablesTileMapLayer/Apple" to="CollectablesTileMapLayer/Apple" method="_on_body_entered"]
-[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@26446" to="CollectablesTileMapLayer/@Area2D@26446" method="_on_body_entered"]
-[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@26447" to="CollectablesTileMapLayer/@Area2D@26447" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@32778" to="CollectablesTileMapLayer/@Area2D@32778" method="_on_body_entered"]
+[connection signal="body_entered" from="CollectablesTileMapLayer/@Area2D@32779" to="CollectablesTileMapLayer/@Area2D@32779" method="_on_body_entered"]
 [connection signal="body_entered" from="ObstaclesTileMapLayer/Spikes" to="ObstaclesTileMapLayer/Spikes" method="_on_body_entered"]
-[connection signal="body_entered" from="ObstaclesTileMapLayer/@Area2D@26448" to="ObstaclesTileMapLayer/@Area2D@26448" method="_on_body_entered"]
