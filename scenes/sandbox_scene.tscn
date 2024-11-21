@@ -9,16 +9,16 @@
 [node name="Player" parent="." instance=ExtResource("1_00p1i")]
 position = Vector2(20, 73)
 
+[node name="PlatformsTileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAADAAIAAwAAAAAAAQA=")
+tile_set = ExtResource("2_fwm1i")
+
 [node name="CollectablesTileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAADAAMAAQAAAAAAAgAFAAMAAQAAAAAAAQAIAAMAAQAAAAAAAgAMAAMAAQAAAAAAAQA=")
 tile_set = ExtResource("2_fwm1i")
 
 [node name="ObstaclesTileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAKAAQAAgAAAAAAAQA=")
-tile_set = ExtResource("2_fwm1i")
-
-[node name="PlatformsTileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAADAAIAAwAAAAAAAQA=")
 tile_set = ExtResource("2_fwm1i")
 
 [node name="GroundTileMapLayer" type="TileMapLayer" parent="."]
