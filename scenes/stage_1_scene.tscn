@@ -29,3 +29,4 @@ position = Vector2(50, 399)
 
 [node name="Goal" parent="." index="6"]
 position = Vector2(550, 223)
+next_scene_path = "res://scenes/stage_2_scene.tscn"
