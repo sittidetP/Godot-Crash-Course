@@ -1,11 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://bal4qvtiv4g7g"]
+[gd_scene load_steps=7 format=3 uid="uid://bal4qvtiv4g7g"]
 
 [ext_resource type="PackedScene" uid="uid://bhq48uqrhoxlc" path="res://player/player.tscn" id="1_re53k"]
+[ext_resource type="Script" path="res://scenes/amount_label.gd" id="1_x2ly5"]
 [ext_resource type="TileSet" uid="uid://n420gebqt3uq" path="res://tilesets/stage_tile_set.tres" id="2_2jayw"]
 [ext_resource type="PackedScene" uid="uid://drjvsqv3811jb" path="res://goal/goal.tscn" id="3_2coxq"]
 [ext_resource type="AudioStream" uid="uid://co0af16u868go" path="res://scenes/Grasslands Theme.mp3" id="4_c785k"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_xcvcq"]
+font_size = 28
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
 [node name="TempleteStageScene" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AmountLabel" type="Label" parent="CanvasLayer"]
+offset_left = 50.0
+offset_top = 48.0
+offset_right = 99.0
+offset_bottom = 90.0
+text = "X / X"
+label_settings = SubResource("LabelSettings_xcvcq")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_x2ly5")
+
+[node name="GetTotalTimer" type="Timer" parent="CanvasLayer"]
+wait_time = 0.1
+one_shot = true
+autostart = true
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 
@@ -32,3 +56,5 @@ tile_set = ExtResource("2_2jayw")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_c785k")
 autoplay = true
+
+[connection signal="timeout" from="CanvasLayer/GetTotalTimer" to="CanvasLayer/AmountLabel" method="_on_get_total_timer_timeout"]
