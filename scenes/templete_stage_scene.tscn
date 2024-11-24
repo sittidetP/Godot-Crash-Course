@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bal4qvtiv4g7g"]
+[gd_scene load_steps=8 format=3 uid="uid://bal4qvtiv4g7g"]
 
 [ext_resource type="PackedScene" uid="uid://bhq48uqrhoxlc" path="res://player/player.tscn" id="1_re53k"]
 [ext_resource type="Script" path="res://scenes/amount_label.gd" id="1_x2ly5"]
+[ext_resource type="Script" path="res://scenes/pause_manager.gd" id="1_xhuah"]
 [ext_resource type="TileSet" uid="uid://n420gebqt3uq" path="res://tilesets/stage_tile_set.tres" id="2_2jayw"]
 [ext_resource type="PackedScene" uid="uid://drjvsqv3811jb" path="res://goal/goal.tscn" id="3_2coxq"]
 [ext_resource type="AudioStream" uid="uid://co0af16u868go" path="res://scenes/Grasslands Theme.mp3" id="4_c785k"]
@@ -12,6 +13,11 @@ outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="TempleteStageScene" type="Node2D"]
+
+[node name="PauseManager" type="Node" parent="." node_paths=PackedStringArray("pause_color_rect")]
+process_mode = 3
+script = ExtResource("1_xhuah")
+pause_color_rect = NodePath("../CanvasLayer/PauseColorRect")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -30,6 +36,16 @@ script = ExtResource("1_x2ly5")
 wait_time = 0.1
 one_shot = true
 autostart = true
+
+[node name="PauseColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+z_index = 20
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.165656, 0.165656, 0.165656, 0.392157)
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 
