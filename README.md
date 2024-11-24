@@ -29,6 +29,8 @@ Audio Sources:
 1. Go to Editor > Editor Settings... > Text Editor > Completion
 2. Check the **Add Type Hints** box
 
+![alt text](image-2.png)
+
 # Settings in this Project
 1. Display > Window
   - W:H → **640 x 480**
