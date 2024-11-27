@@ -8,8 +8,7 @@ func _ready() -> void:
 	start_time = Time.get_ticks_msec()
 	
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not StageManager.is_stage_finish:
 		text = str((Time.get_ticks_msec() - start_time) / 1000.0 )
