@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=40 format=3 uid="uid://ds1dvib3buumn"]
+[gd_resource type="SpriteFrames" load_steps=40 format=3 uid="uid://bbo31rf20sker"]
 
 [ext_resource type="Texture2D" uid="uid://cbvh6f276exwa" path="res://goal/Checkpoint (No Flag).png" id="1_tt7sy"]
 [ext_resource type="Texture2D" uid="uid://dyj28obv4u11u" path="res://goal/Checkpoint (Flag Idle)(64x64).png" id="2_sqhyk"]

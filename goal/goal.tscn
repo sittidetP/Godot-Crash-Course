@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://drjvsqv3811jb"]
+[gd_scene load_steps=5 format=3 uid="uid://bq2jfc2g3tns3"]
 
 [ext_resource type="Script" path="res://goal/goal.gd" id="1_ai1va"]
-[ext_resource type="SpriteFrames" uid="uid://ds1dvib3buumn" path="res://goal/goal_sprite_frame.tres" id="1_u2t6d"]
+[ext_resource type="SpriteFrames" path="res://goal/goal_sprite_frame.tres" id="1_u2t6d"]
 [ext_resource type="AudioStream" uid="uid://dd36jxlxvwasn" path="res://goal/Jingle_Achievement_01.mp3" id="3_nfrrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6vxgl"]
