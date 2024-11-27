@@ -17,6 +17,7 @@ func _on_body_entered(_body: Node2D) -> void:
 	
 	if get_tree().get_node_count_in_group("collectables") == 0:
 		is_enter = true
+		StageManager.is_stage_finish = true
 		audio_stream_player.play()
 		animated_sprite_2d.play("flag_out")
 
