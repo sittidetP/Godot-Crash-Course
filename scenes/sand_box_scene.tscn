@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi1ufodvdd678"]
+
+[ext_resource type="PackedScene" uid="uid://bvat51o0ba06v" path="res://player/player.tscn" id="1_t0ov4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w70qr"]
+size = Vector2(640, 20)
+
+[node name="SandBoxScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_t0ov4")]
+position = Vector2(52, 12)
+
+[node name="TempGround" type="StaticBody2D" parent="."]
+position = Vector2(114, 215)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TempGround"]
+position = Vector2(206, 0)
+shape = SubResource("RectangleShape2D_w70qr")
+
+[node name="ColorRect" type="ColorRect" parent="TempGround"]
+offset_left = -113.0
+offset_top = -11.0
+offset_right = 526.0
+offset_bottom = 11.0

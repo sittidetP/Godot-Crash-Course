@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvat51o0ba06v"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_j5w7j"]
+[ext_resource type="SpriteFrames" uid="uid://bikr7r7o48wfe" path="res://player/player_sprite_frame.tres" id="2_wfgcq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vy4dx"]
+size = Vector2(16, 26)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_j5w7j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = ExtResource("2_wfgcq")
+animation = &"run"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_vy4dx")
