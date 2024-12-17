@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsnf0etky6glr"]
+
+[ext_resource type="Script" path="res://collectable/collectable.gd" id="1_hqxsx"]
+[ext_resource type="SpriteFrames" uid="uid://dkkj681jcwsbt" path="res://collectable/apple_sprite_frames.tres" id="2_urckv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qni1v"]
+radius = 8.06226
+
+[node name="Apple" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_hqxsx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_urckv")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qni1v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

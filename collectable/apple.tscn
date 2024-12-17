@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmg1prfrr81jp"]
+
+[ext_resource type="PackedScene" uid="uid://dew3w4s3wtien" path="res://collectable/collectable.tscn" id="1_cmuws"]
+[ext_resource type="SpriteFrames" uid="uid://dkkj681jcwsbt" path="res://collectable/apple_sprite_frames.tres" id="2_urckv"]
+
+[node name="Apple" instance=ExtResource("1_cmuws")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_urckv")

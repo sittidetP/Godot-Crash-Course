@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dowdatnht6oar"]
+
+[ext_resource type="PackedScene" uid="uid://dew3w4s3wtien" path="res://collectable/collectable.tscn" id="1_0mo65"]
+[ext_resource type="SpriteFrames" uid="uid://cwvj6cpqkokdp" path="res://collectable/strawberry_sprite_frames.tres" id="2_40gfy"]
+
+[node name="Strawberry" instance=ExtResource("1_0mo65")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_40gfy")
