@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bi1ufodvdd678"]
+[gd_scene load_steps=10 format=4 uid="uid://bi1ufodvdd678"]
 
 [ext_resource type="PackedScene" uid="uid://bvat51o0ba06v" path="res://player/player.tscn" id="1_t0ov4"]
 [ext_resource type="Texture2D" uid="uid://c31sby08qf634" path="res://tilesets/Terrain (16x16).png" id="2_osltd"]
 [ext_resource type="PackedScene" uid="uid://dmg1prfrr81jp" path="res://collectable/apple.tscn" id="3_x8175"]
 [ext_resource type="PackedScene" uid="uid://dowdatnht6oar" path="res://collectable/strawberry.tscn" id="4_cm8ib"]
 [ext_resource type="PackedScene" uid="uid://drjvsqv3811jb" path="res://goal/goal.tscn" id="5_88sj8"]
+[ext_resource type="PackedScene" uid="uid://tr3ba67tg7g8" path="res://one_way_platform/one_way_platform.tscn" id="6_ib35a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2hs4h"]
 texture = ExtResource("2_osltd")
@@ -203,7 +204,10 @@ tile_set = SubResource("TileSet_jb376")
 position = Vector2(317, 144)
 next_scene_path = "res://scenes/sand_box_scene.tscn"
 
+[node name="OneWayPlatform" parent="." instance=ExtResource("6_ib35a")]
+position = Vector2(138, 119)
+
 [connection signal="body_entered" from="GroundTileMapLayer/Apple" to="GroundTileMapLayer/Apple" method="_on_body_entered"]
 [connection signal="body_entered" from="GroundTileMapLayer/Strawberry" to="GroundTileMapLayer/Strawberry" method="_on_body_entered"]
-[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@39450" to="GroundTileMapLayer/@Area2D@39450" method="_on_body_entered"]
-[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@39451" to="GroundTileMapLayer/@Area2D@39451" method="_on_body_entered"]
+[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@47207" to="GroundTileMapLayer/@Area2D@47207" method="_on_body_entered"]
+[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@47208" to="GroundTileMapLayer/@Area2D@47208" method="_on_body_entered"]

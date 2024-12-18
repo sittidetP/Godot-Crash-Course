@@ -14,7 +14,6 @@ script = ExtResource("1_dbngn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_u2t6d")
-animation = &"flag_out"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
