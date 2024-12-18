@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://ou0bsydtn08x" path="res://collectable/Pickup_00.mp3" id="2_b0ptq"]
 
 [node name="CollectedEffectAnimatedSprite2D" type="AnimatedSprite2D"]
+z_index = 6
 sprite_frames = ExtResource("1_drus7")
 autoplay = "default"
 frame = 5

@@ -5,8 +5,15 @@ extends Area2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var flag_idle_timer: Timer = $FlagIdleTimer
 
+var is_entered := false
+
 func _on_body_entered(body: Node2D) -> void:
-	animated_sprite_2d.play("flag_out")
+	if is_entered: 
+		return
+	
+	if get_tree().get_node_count_in_group("collectables") == 0:
+		is_entered = true
+		animated_sprite_2d.play("flag_out")
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animated_sprite_2d.animation == "flag_out":

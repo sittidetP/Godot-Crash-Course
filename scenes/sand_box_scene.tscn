@@ -205,5 +205,5 @@ next_scene_path = "res://scenes/sand_box_scene.tscn"
 
 [connection signal="body_entered" from="GroundTileMapLayer/Apple" to="GroundTileMapLayer/Apple" method="_on_body_entered"]
 [connection signal="body_entered" from="GroundTileMapLayer/Strawberry" to="GroundTileMapLayer/Strawberry" method="_on_body_entered"]
-[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@29152" to="GroundTileMapLayer/@Area2D@29152" method="_on_body_entered"]
-[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@29153" to="GroundTileMapLayer/@Area2D@29153" method="_on_body_entered"]
+[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@39450" to="GroundTileMapLayer/@Area2D@39450" method="_on_body_entered"]
+[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@39451" to="GroundTileMapLayer/@Area2D@39451" method="_on_body_entered"]
