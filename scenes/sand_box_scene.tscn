@@ -209,5 +209,5 @@ position = Vector2(138, 119)
 
 [connection signal="body_entered" from="GroundTileMapLayer/Apple" to="GroundTileMapLayer/Apple" method="_on_body_entered"]
 [connection signal="body_entered" from="GroundTileMapLayer/Strawberry" to="GroundTileMapLayer/Strawberry" method="_on_body_entered"]
-[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@47207" to="GroundTileMapLayer/@Area2D@47207" method="_on_body_entered"]
-[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@47208" to="GroundTileMapLayer/@Area2D@47208" method="_on_body_entered"]
+[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@55739" to="GroundTileMapLayer/@Area2D@55739" method="_on_body_entered"]
+[connection signal="body_entered" from="GroundTileMapLayer/@Area2D@55740" to="GroundTileMapLayer/@Area2D@55740" method="_on_body_entered"]

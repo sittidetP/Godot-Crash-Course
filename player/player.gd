@@ -7,12 +7,17 @@ extends CharacterBody2D
 
 var facing_direction := 1
 
+const ONE_WAY_COLLISION_MARGIN := 1
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
+		
+	if Input.is_action_just_pressed("drop") and is_on_floor():
+		position.y += ONE_WAY_COLLISION_MARGIN
 
 	var direction := Input.get_axis("move_left", "move_right")
 	flip(int(direction))
