@@ -1,6 +1,9 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c5tq5afqdnrxl"]
+[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://c5tq5afqdnrxl"]
 
 [ext_resource type="Texture2D" uid="uid://c31sby08qf634" path="res://tilesets/Terrain (16x16).png" id="1_pxm5i"]
+[ext_resource type="PackedScene" uid="uid://dmg1prfrr81jp" path="res://collectable/apple.tscn" id="2_1fy4k"]
+[ext_resource type="PackedScene" uid="uid://dowdatnht6oar" path="res://collectable/strawberry.tscn" id="3_15yxe"]
+[ext_resource type="PackedScene" uid="uid://tr3ba67tg7g8" path="res://one_way_platform/one_way_platform.tscn" id="4_3a2u8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2hs4h"]
 texture = ExtResource("1_pxm5i")
@@ -175,7 +178,18 @@ texture = ExtResource("1_pxm5i")
 19:10/0 = 0
 20:10/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_pe73h"]
+resource_name = "collectables"
+scenes/1/scene = ExtResource("2_1fy4k")
+scenes/2/scene = ExtResource("3_15yxe")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_xhkkf"]
+resource_name = "platform"
+scenes/1/scene = ExtResource("4_3a2u8")
+
 [resource]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_2hs4h")
+sources/1 = SubResource("TileSetScenesCollectionSource_pe73h")
+sources/2 = SubResource("TileSetScenesCollectionSource_xhkkf")
